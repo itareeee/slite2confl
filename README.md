@@ -1,4 +1,6 @@
-Migration from Slite to Confluence
+# slite2confl
+
+A tool for migration from Slite to Confluence Cloud.
 
 ### Setup
 

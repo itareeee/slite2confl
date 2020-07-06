@@ -1,10 +1,13 @@
 {
-  "name": "slite-to-confluence",
-  "version": "0.1.0",
+  "name": "slite2confl",
+  "version": "0.2.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "slite2confl": "bin/slite2confl.js"
   },
   "author": "itareeee",
   "license": "ISC",
@@ -13,5 +16,8 @@
     "graphql-request": "^2.1.0-next.1",
     "markdown-it": "^11.0.0",
     "node-fetch": "^2.6.0"
+  },
+  "publishConfig": { 
+    "registry": "https://npm.pkg.github.com/"
   }
 }
