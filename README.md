@@ -8,18 +8,19 @@ A tool for migration from Slite to Confluence Cloud.
 $ npx itareeee/slite2confl [options] <slite-url> <confluence-url>
 ```
 
-- Arguments
-  - `slite-url`: Slite Channel URL or Note URL to migrate
-    - e.g. https://your.slite.com/app/channels/some-channel
-  - `confluence-url`: Confluence Page URL under which the slite notes are migrated.
-    - e.g. https://your.atlassian.net/wiki/spaces/some-space/pages/some-page/some-page-title
+#### Arguments
+- `slite-url`: Slite Channel URL or Note URL to migrate
+  - e.g. https://your.slite.com/app/channels/some-channel
+- `confluence-url`: Confluence Page URL under which the slite notes are migrated.
+  - e.g. https://your.atlassian.net/wiki/spaces/some-space/pages/some-page/some-page-title
 
-- Required options
-  - `--slite-token` (default: environment variable `SLITE_TOKEN`)
-    - Go to {your}.slite.com, open DevTool, and Run `copy(JSON.parse(localStorage.TOKENS).apiToken)` on console
-  - `--confluence-token` (default: environment variable `CONFLUENCE_TOKEN`)
-    - See: https://id.atlassian.com/manage-profile/security/api-tokens
-  - `--confluence-email` (default: environment variable `CONFLUENCE_EMAIL`)
-- Arbitrary Options:
-  - `-r, --recursive`
-  - `-d, --dry-run`
+#### Required options
+- `--slite-token` (default: environment variable `SLITE_TOKEN`)
+  - Go to {your}.slite.com, open DevTool, and Run `copy(JSON.parse(localStorage.TOKENS).apiToken)` on console
+- `--confluence-token` (default: environment variable `CONFLUENCE_TOKEN`)
+  - See: https://id.atlassian.com/manage-profile/security/api-tokens
+- `--confluence-email` (default: environment variable `CONFLUENCE_EMAIL`)
+
+#### Arbitrary Options:
+- `-r, --recursive`
+- `-d, --dry-run`
