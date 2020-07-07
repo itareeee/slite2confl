@@ -10,9 +10,10 @@ $ npx itareeee/slite2confl [options] <slite-url> <confluence-url>
 
 #### Arguments
 - `slite-url`: Slite Channel URL or Note URL to migrate
-  - e.g. https://your.slite.com/app/channels/some-channel
+  - e.g. https://${your}.slite.com/app/channels/{channelId}
+  - e.g. https://${your}.slite.com/app/channels/{channelId}/notes/{noteId}
 - `confluence-url`: Confluence Page URL under which the slite notes are migrated.
-  - e.g. https://your.atlassian.net/wiki/spaces/some-space/pages/some-page/some-page-title
+  - e.g. https://your.atlassian.net/wiki/spaces/${space-key}/pages/{pageId}/{pageTitle}
 
 #### Required options
 - `--slite-token` (default: environment variable `SLITE_TOKEN`)
