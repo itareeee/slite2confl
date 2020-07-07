@@ -5,7 +5,7 @@ A tool for migration from Slite to Confluence Cloud.
 ### Basic Usage
 
 ```
-$ npx @itareeee/slite2confl https://your.slite.com/app/channels/some-channel https://your.atlassian.net/wiki/spaces/some-space/pages/some-page/some-page-title
+$ npx itareeee/slite2confl https://your.slite.com/app/channels/some-channel https://your.atlassian.net/wiki/spaces/some-space/pages/some-page/some-page-title
 ```
 
 - Required options
