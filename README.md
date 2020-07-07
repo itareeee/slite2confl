@@ -5,8 +5,14 @@ A tool for migration from Slite to Confluence Cloud.
 ### Basic Usage
 
 ```
-$ npx itareeee/slite2confl https://your.slite.com/app/channels/some-channel https://your.atlassian.net/wiki/spaces/some-space/pages/some-page/some-page-title
+$ npx itareeee/slite2confl <slite-url> <confluence-url>
 ```
+
+- Arguments
+  - `slite-url`: Slite Channel URL or Note URL to migrate
+    - e.g. https://your.slite.com/app/channels/some-channel
+  - `confluence-url`: Confluence Page URL under which the slite notes are migrated.
+    - e.g. https://your.atlassian.net/wiki/spaces/some-space/pages/some-page/some-page-title
 
 - Required options
   - `--slite-token` (default: environment variable `SLITE_TOKEN`)
