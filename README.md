@@ -5,7 +5,7 @@ A tool for migration from Slite to Confluence Cloud.
 ### Basic Usage
 
 ```
-$ npx itareeee/slite2confl <slite-url> <confluence-url>
+$ npx itareeee/slite2confl [options] <slite-url> <confluence-url>
 ```
 
 - Arguments
