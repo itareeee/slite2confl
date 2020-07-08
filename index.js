@@ -32,10 +32,10 @@ const { createConfluencePage } = require('./lib/confluence/create-confluence-pag
     const pageId = await createConfluencePage(note.title, xhtml, parentPageId, confluenceCxt);
 
     if (pageId) {
-      console.log(`Success migrated (pageId: ${pageId})`);
+      console.log(`Successfully migrated (pageId: ${pageId})`);
       createdPages[note.id] = pageId;
     } else {
-      throw new Error(`Error: failed to migrate slite note (noteId: ${id}, noteTitle: ${title})`);
+      throw new Error(`Failed to migrate slite note (noteId: ${note.id}, noteTitle: ${note.title})`);
     }
   }
 })();
