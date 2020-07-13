@@ -17,6 +17,7 @@ const { createConfluencePage } = require('./lib/confluence/create-confluence-pag
     console.log(`The following Slite notes are migrated under ${program.to}`);
     for (const note of notes) {
       console.log(`noteId: ${note.id}, noteTitle: ${note.title}`);
+      await fetchSliteNoteContent(note.publicShareToken, note.title, sliteCxt);
     }
     return;
   }
@@ -26,7 +27,7 @@ const { createConfluencePage } = require('./lib/confluence/create-confluence-pag
   for (const note of notes) {
     console.log(`\nMigrating note (noteId: ${note.id}, noteTitle: ${note.title}) ...`);
 
-    const xhtml = await fetchSliteNoteContent(note.publicShareToken, sliteCxt);
+    const xhtml = await fetchSliteNoteContent(note.publicShareToken, note.title, sliteCxt);
 
     const parentPageId = note.parentNoteId ? createdPages[note.parentNoteId] : confluenceCxt.pageId;
     const pageId = await createConfluencePage(note.title, xhtml, parentPageId, confluenceCxt);
