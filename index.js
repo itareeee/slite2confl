@@ -7,7 +7,7 @@ const { createConfluencePage } = require('./lib/confluence/create-confluence-pag
 
 
 (async function() {
-  const { slite: sliteCxt, confluence: confluenceCxt, dryRun, recursive } = parseCommand();
+  const { slite: sliteCxt, confluence: confluenceCxt, dryRun, recursive, bypassDuplicateError } = parseCommand();
 
   const notes = sliteCxt.channelId != null
     ? await findNotesUnderChannel(sliteCxt.origin, sliteCxt.token, sliteCxt.channelId, recursive)  
@@ -30,7 +30,7 @@ const { createConfluencePage } = require('./lib/confluence/create-confluence-pag
     const xhtml = await fetchSliteNoteContent(note.publicShareToken, note.title, sliteCxt);
 
     const parentPageId = note.parentNoteId ? createdPages[note.parentNoteId] : confluenceCxt.pageId;
-    const pageId = await createConfluencePage(note.title, xhtml, parentPageId, confluenceCxt);
+    const pageId = await createConfluencePage(note.title, xhtml, parentPageId, bypassDuplicateError, confluenceCxt);
 
     if (pageId) {
       console.log(`Successfully migrated (pageId: ${pageId})`);
